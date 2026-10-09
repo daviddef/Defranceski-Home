@@ -56,11 +56,15 @@ body {
   padding-inline: 20px;
 }
 a { color: inherit; }
-.wrap { max-width: 1080px; margin-inline: auto; }
+.wrap { max-width: 1080px; margin-inline: auto; position: relative; }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
 
 
 .top { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: flex-end; gap: 8px 24px; padding-block: 22px 8px; }
+@media (min-width: 760px) {
+  .top { position: absolute; top: 30px; right: 0; padding-block: 0; }
+  .hero { padding-top: 16px; }
+}
 .mark { font: 700 17px/1 var(--font-display); letter-spacing: -.01em; text-decoration: none; }
 .top nav { display: flex; gap: 22px; font-size: 14px; }
 .top nav a { text-decoration: none; color: var(--ink-2); padding-block: 4px; border-bottom: 1px solid transparent; }
