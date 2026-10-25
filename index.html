@@ -190,6 +190,14 @@ a { color: inherit; }
 .ledger b { font: 800 24px/1 var(--font-display); letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
 .ledger span { font: 400 12.5px/1.3 var(--font-mono); color: var(--ink-3); letter-spacing: .01em; }
 
+.start { margin-top: 26px; padding-top: 18px; border-top: 1px solid var(--rule); }
+.start h2 { font: 700 13px/1.2 var(--font-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); }
+.start ul { list-style: none; margin: 12px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 10px; }
+.start a { display: block; height: 100%; padding: 12px 14px; background: var(--panel); border: 1px solid var(--rule); border-left: 3px solid var(--accent); border-radius: 4px; text-decoration: none; }
+.start a:hover { border-color: var(--accent); }
+.start b { display: block; font: 700 16px/1.25 var(--font-display); letter-spacing: -.01em; }
+.start span { display: block; margin-top: 3px; font-size: 13.5px; line-height: 1.35; color: var(--ink-3); }
+
 section { padding-block: clamp(36px, 6vw, 64px) 0; scroll-margin-top: 12px; }
 .sec-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 10px 24px; margin-bottom: 20px; }
 h2 { margin: 0; font: 700 clamp(26px, 4vw, 36px)/1.05 var(--font-display); letter-spacing: -.025em; text-wrap: balance; }
@@ -343,6 +351,15 @@ footer a { color: var(--ink-2); }
         <li><b>9</b><span>apps on the App Store</span></li>
         <li><b>1</b><span>atlas of record offices</span></li>
       </ul>
+      <nav class="start" aria-labelledby="start-h">
+        <h2 id="start-h">What are you here to do?</h2>
+        <ul>
+          <li><a href="#families"><b>Research a family or surname</b><span>The eight family archives, each graded by its evidence</span></a></li>
+          <li><a href="#atlas"><b>Find records for a place</b><span>Record Atlas: who holds the paper, and where</span></a></li>
+          <li><a href="https://ourfamily.defranceski.com/" rel="noopener"><b>Read the family story</b><span>Our Family tells it for a child; the archives tell it in full</span></a></li>
+          <li><a href="#apps"><b>Try an app or a tool</b><span>Nine iPhone apps, plus online tools</span></a></li>
+        </ul>
+      </nav>
     </div>
 
     <section class="band" id="atlas" aria-label="Research tool">
@@ -627,10 +644,10 @@ footer a { color: var(--ink-2); }
       <div class="sec-head">
         <div>
           <h2 id="apps-h">On the App Store</h2>
-          <p class="sec-sub">Nine apps live, all published under my own name, and a tenth almost there.</p>
+          <p class="sec-sub">Ten apps: nine live on the App Store, all under my own name, and Spool almost there.</p>
         </div>
         <div class="chips" role="group" aria-label="Filter apps">
-          <button class="chip" type="button" data-filter="all" aria-pressed="true">All 10</button>
+          <button class="chip" type="button" data-filter="all" aria-pressed="true">All 10 (9 live)</button>
           <button class="chip" type="button" data-filter="everyday" aria-pressed="false">Everyday 4</button>
           <button class="chip" type="button" data-filter="games" aria-pressed="false">Games 4</button>
           <button class="chip" type="button" data-filter="tools" aria-pressed="false">Tools 2</button>
