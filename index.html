@@ -283,6 +283,13 @@ a.f-title:hover { text-decoration: underline; text-decoration-color: var(--accen
 a.f-go:hover { filter: brightness(1.08); }
 a.f-go.alt:hover { background: var(--accent-soft); filter: none; }
 a.f-go:focus-visible, a.f-title:focus-visible, a.f-visual:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.f-tools { grid-column: 1 / -1; list-style: none; margin: 0; padding: 16px 26px 22px; border-top: 1px solid var(--rule); display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 10px 22px; }
+.f-tools a { display: block; height: 100%; text-decoration: none; color: inherit; padding: 2px 0 2px 12px; border-left: 3px solid var(--accent); }
+.f-tools a:hover b { text-decoration: underline; text-decoration-color: var(--accent); text-underline-offset: 3px; }
+.f-tools a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.f-tools b { display: block; font: 700 15px/1.25 var(--font-display); letter-spacing: -.01em; }
+.f-tools span { display: block; margin-top: 3px; font-size: 13.5px; line-height: 1.4; color: var(--ink-3); }
+@media (max-width: 700px) { .f-tools { padding: 14px 18px 18px; } }
 .band { padding-block: clamp(8px, 2vw, 16px) 0; }
 @media (max-width: 700px) { .feature { grid-template-columns: 1fr; } .f-visual { min-height: 0; aspect-ratio: 16 / 7; } .f-text { padding: 18px; } }
 @media (prefers-reduced-motion: reduce) { .feature { transition: none; } }
@@ -355,6 +362,7 @@ footer a { color: var(--ink-2); }
         <h2 id="start-h">What are you here to do?</h2>
         <ul>
           <li><a href="#families"><b>Research a family or surname</b><span>The eight family archives, each graded by its evidence</span></a></li>
+          <li><a href="https://recordatlas.org/your-name/" rel="noopener"><b>Search a name, every spelling</b><span>Surnames and given names, across languages and clerks</span></a></li>
           <li><a href="#atlas"><b>Find records for a place</b><span>Record Atlas: who holds the paper, and where</span></a></li>
           <li><a href="https://archive.defranceski.com/story/" rel="noopener"><b>Read the family story</b><span>A short book of each family's direct line, with trees and maps. Our Family tells it for a child</span></a></li>
           <li><a href="#apps"><b>Try an app or a tool</b><span>Nine iPhone apps, plus online tools</span></a></li>
@@ -369,9 +377,17 @@ footer a { color: var(--ink-2); }
           <span class="f-eyebrow">Research tool</span>
           <a class="f-title" href="https://recordatlas.org" rel="noopener">Record Atlas</a>
           <span class="f-lede">Every place your people came from, and who holds the paper. A map of where genealogical records actually are, searchable by every name a place has had.</span>
-          <span class="f-stats">50,000+ places · 3 million+ record volumes · archives in 80+ countries</span>
-          <span class="f-actions"><a class="f-go" href="https://recordatlas.org" rel="noopener">Open the atlas →</a><a class="f-go alt" href="https://recordatlas.org/places/" rel="noopener">Places →</a><a class="f-go alt" href="https://recordatlas.org/surnames/" rel="noopener">Surnames →</a><a class="f-go alt" href="https://recordatlas.org/flags/" rel="noopener">Flags Atlas →</a></span>
+          <span class="f-stats">55,000+ places · 3.4 million record volumes · archives in 90 countries</span>
+          <span class="f-actions"><a class="f-go" href="https://recordatlas.org" rel="noopener">Open the atlas →</a><a class="f-go alt" href="https://recordatlas.org/start/" rel="noopener">Where to start →</a></span>
         </span>
+        <ul class="f-tools" aria-label="What the atlas can do">
+          <li><a href="https://recordatlas.org/places/" rel="noopener"><b>Places</b><span>Find a village or town under any name it has had (Fiume is Rijeka, Salisbury is Harare) and see who held its records in which years.</span></a></li>
+          <li><a href="https://recordatlas.org/surnames/" rel="noopener"><b>Surnames</b><span>Have a name and nothing else? See every way it is spelt and the countries it is found in.</span></a></li>
+          <li><a href="https://recordatlas.org/your-name/" rel="noopener"><b>Say your name</b><span>Ivan, Johann, Giovanni, Zuane and John are one given name. Find every form a clerk may have written, in a register or an index.</span></a></li>
+          <li><a href="https://recordatlas.org/roots/" rel="noopener"><b>Roots &amp; Routes</b><span>Drop in a family tree file and see it drawn on the map, each place with the flag that flew over it that year. It never leaves your computer.</span></a></li>
+          <li><a href="https://recordatlas.org/flags/" rel="noopener"><b>Flags Atlas</b><span>Who ruled where, flag by flag, through the centuries.</span></a></li>
+          <li><a href="https://recordatlas.org/history/" rel="noopener"><b>History</b><span>Watch the ground change hands, year by year.</span></a></li>
+        </ul>
       </div>
     </section>
 
