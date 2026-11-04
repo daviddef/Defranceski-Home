@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="How eight family archives and one world atlas of records fit together: shared names, shared maps of who held the paper, shared checks, and research that flows back.">
+<link rel="canonical" href="https://defranceski.com/how-it-works/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="How it fits together: one atlas, eight archives">
+<meta property="og:description" content="Eight family archives read one shared atlas of records, and what each one finds goes back to it.">
+<meta property="og:image" content="https://defranceski.com/og.png">
+<title>How it fits together</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root {
+  --bg: #EBEFF2;
+  --panel: #F7F9FA;
+  --ink: #101E29;
+  --ink-2: #3B4D59;
+  --ink-3: #5A6B73;
+  --rule: #C8D1D7;
+  --accent: #0A6B75;
+  --accent-ink: #FFFFFF;
+  --accent-soft: #D8EAEC;
+  --font-display: "Bricolage Grotesque", "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Hanken Grotesk", "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0B1720; --panel: #12232E; --ink: #E7EFF3; --ink-2: #B3C3CC; --ink-3: #8398A3;
+    --rule: #26404D; --accent: #55C3CD; --accent-ink: #06222A; --accent-soft: #123A42;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0B1720; --panel: #12232E; --ink: #E7EFF3; --ink-2: #B3C3CC; --ink-3: #8398A3;
+  --rule: #26404D; --accent: #55C3CD; --accent-ink: #06222A; --accent-soft: #123A42;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 16px; line-height: 1.6; padding-inline: 20px; }
+a { color: var(--accent); text-underline-offset: 3px; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+.wrap { max-width: 980px; margin-inline: auto; }
+.mark { display: inline-block; margin-block: 22px 0; font: 700 17px/1 var(--font-display); letter-spacing: -.01em; color: var(--ink); text-decoration: none; }
+.intro { max-width: 720px; }
+.kick { margin: 30px 0 0; font: 500 12px/1 var(--font-mono); letter-spacing: .07em; text-transform: uppercase; color: var(--ink-3); }
+h1 { margin: 10px 0 0; font: 800 clamp(34px, 6.4vw, 60px)/1.02 var(--font-display); letter-spacing: -.035em; text-wrap: balance; }
+.lede { margin: 16px 0 0; font-size: clamp(17px, 2.2vw, 21px); line-height: 1.45; color: var(--ink-2); text-wrap: pretty; }
+h2 { margin: 0 0 10px; font: 700 clamp(22px, 3.2vw, 29px)/1.12 var(--font-display); letter-spacing: -.02em; text-wrap: balance; }
+h3 { margin: 0; font: 700 17px/1.25 var(--font-display); letter-spacing: -.01em; }
+p, li { color: var(--ink-2); }
+p { margin: 0 0 12px; }
+section { margin-top: clamp(40px, 7vw, 72px); }
+
+/* the picture */
+.hub { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 8px clamp(20px, 3vw, 40px); align-items: center; margin-top: clamp(24px, 4vw, 40px); }
+.hub figure { margin: 0; }
+.hub svg { display: block; width: 100%; height: auto; max-width: 700px; margin-inline: auto; }
+.hub .read { max-width: 440px; }
+.hub .read h2 { margin-bottom: 8px; }
+.key { list-style: none; margin: 14px 0 0; padding: 0; display: grid; gap: 8px; font-size: 14.5px; }
+.key li { display: grid; grid-template-columns: 38px 1fr; gap: 10px; align-items: start; margin: 0; }
+.key svg { width: 38px; height: 12px; margin: 5px 0 0; }
+svg .ring { fill: none; stroke: var(--accent); stroke-width: 1.5; stroke-dasharray: 3 7; opacity: .75; }
+svg .core { fill: var(--accent-soft); stroke: var(--accent); stroke-width: 2.5; }
+svg .hubt { font: 800 34px var(--font-display); fill: var(--accent); letter-spacing: -.025em; }
+svg .hubs { font: 500 15px var(--font-body); fill: var(--ink-2); }
+svg .facet rect { fill: var(--panel); stroke: var(--accent); stroke-width: 1.4; }
+svg .facet text { font: 600 17px var(--font-body); fill: var(--ink); }
+svg .arch rect { fill: var(--panel); stroke: var(--ink-3); stroke-width: 1.3; }
+svg .arch text { font: 700 19px var(--font-display); fill: var(--ink); letter-spacing: -.01em; }
+svg .kit rect { fill: var(--bg); stroke: var(--accent); stroke-width: 1.2; }
+svg .kit text { font: 500 14px var(--font-mono); fill: var(--accent); }
+svg .bk { stroke: var(--accent); stroke-width: 2; }
+svg .rd { stroke: var(--ink-3); stroke-width: 2; stroke-dasharray: 5 5; }
+svg .bk.k, svg .rd.k { }
+
+/* what sits in the middle */
+.cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(215px, 1fr)); gap: 14px; margin-top: 18px; }
+.card { background: var(--panel); border: 1px solid var(--rule); border-top: 3px solid var(--accent); border-radius: 4px; padding: 16px 18px 14px; }
+.card p { margin: 6px 0 0; font-size: 15px; line-height: 1.5; }
+.card .n { display: block; margin-top: 10px; font: 500 12.5px/1.3 var(--font-mono); color: var(--ink-3); }
+.figs { list-style: none; margin: 22px 0 0; padding: 14px 0 0; border-top: 1px solid var(--rule); display: flex; flex-wrap: wrap; gap: 8px 34px; }
+.figs li { margin: 0; color: var(--ink-3); font-size: 14px; }
+.figs b { display: block; font: 800 clamp(24px, 4vw, 34px)/1.05 var(--font-display); letter-spacing: -.03em; color: var(--ink); }
+
+/* how one question travels */
+.steps { list-style: none; margin: 18px 0 0; padding: 0; display: grid; gap: 0; counter-reset: s; max-width: 760px; }
+.steps li { position: relative; margin: 0; padding: 0 0 22px 52px; counter-increment: s; }
+.steps li::before { content: counter(s); position: absolute; left: 0; top: 0; width: 34px; height: 34px; border-radius: 50%; background: var(--accent); color: var(--accent-ink); font: 700 16px/34px var(--font-display); text-align: center; }
+.steps li::after { content: ""; position: absolute; left: 16px; top: 38px; bottom: 4px; width: 2px; background: var(--rule); }
+.steps li:last-child { padding-bottom: 0; }
+.steps li:last-child::after { display: none; }
+.steps p { margin: 4px 0 0; }
+.said { font: 500 14px/1.4 var(--font-mono); color: var(--ink-3); }
+
+.rules { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 22px; margin-top: 16px; }
+.rules p { font-size: 15px; margin-top: 4px; }
+.go { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+.go a { font: 600 14px/1 var(--font-body); padding: 12px 18px; border-radius: 999px; text-decoration: none; background: var(--accent); color: var(--accent-ink); }
+.go a.alt { background: transparent; color: var(--accent); box-shadow: inset 0 0 0 1.5px var(--accent); }
+.go a:hover { filter: brightness(1.08); }
+footer { margin-top: 64px; padding-block: 24px 40px; border-top: 1px solid var(--rule); font-size: 14px; color: var(--ink-3); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; }
+footer a { color: var(--ink-2); }
+@media (max-width: 820px) { .hub { grid-template-columns: minmax(0, 1fr); } .hub .read { max-width: none; } }
+</style>
+<script data-goatcounter="https://defranceskihome.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+<div class="wrap">
+  <a class="mark" href="/">Defranceski</a>
+  <main>
+    <div class="intro">
+      <p class="kick">How it fits together</p>
+      <h1>One atlas in the middle. Eight archives around it.</h1>
+      <p class="lede">The family archives on this site are not eight separate websites. They are eight windows onto one shared map of the world&rsquo;s records, built so that whatever is found in one is useful to all the others.</p>
+    </div>
+
+    <div class="hub">
+      <figure>
+        <svg viewBox="0 0 800 800" role="img" aria-labelledby="hub-t hub-d">
+          <title id="hub-t">The Record Atlas at the centre of eight family archives</title>
+          <desc id="hub-d">The Record Atlas sits in the middle, holding surnames, given names, place names by date, who held the records, flags and rulers, and Roots and Routes. Eight family archives surround it inside one shared kit. Each archive reads from the atlas, and what it finds goes back.</desc>
+<circle class="ring" cx="400" cy="400" r="266"/>
+<line class="rd" x1="520.2" y1="122.9" x2="486.9" y2="203.3"/>
+<line class="bk" x1="511.0" y1="119.1" x2="477.7" y2="199.5"/>
+<line class="rd" x1="680.9" y1="289.0" x2="600.5" y2="322.3"/>
+<line class="bk" x1="677.1" y1="279.8" x2="596.7" y2="313.1"/>
+<line class="rd" x1="677.1" y1="520.2" x2="596.7" y2="486.9"/>
+<line class="bk" x1="680.9" y1="511.0" x2="600.5" y2="477.7"/>
+<line class="rd" x1="511.0" y1="680.9" x2="477.7" y2="600.5"/>
+<line class="bk" x1="520.2" y1="677.1" x2="486.9" y2="596.7"/>
+<line class="rd" x1="279.8" y1="677.1" x2="313.1" y2="596.7"/>
+<line class="bk" x1="289.0" y1="680.9" x2="322.3" y2="600.5"/>
+<line class="rd" x1="119.1" y1="511.0" x2="199.5" y2="477.7"/>
+<line class="bk" x1="122.9" y1="520.2" x2="203.3" y2="486.9"/>
+<line class="rd" x1="122.9" y1="279.8" x2="203.3" y2="313.1"/>
+<line class="bk" x1="119.1" y1="289.0" x2="199.5" y2="322.3"/>
+<line class="rd" x1="289.0" y1="119.1" x2="322.3" y2="199.5"/>
+<line class="bk" x1="279.8" y1="122.9" x2="313.1" y2="203.3"/>
+<circle class="core" cx="400" cy="400" r="215"/>
+<text class="hubt" x="400" y="274" text-anchor="middle">Record Atlas</text>
+<text class="hubs" x="400" y="302" text-anchor="middle">who holds the paper, and when</text>
+<g class="facet"><rect x="325.0" y="330.0" width="150.0" height="34" rx="17"/><text x="400" y="352.0" text-anchor="middle">Surnames</text></g>
+<g class="facet"><rect x="325.0" y="371.0" width="150.0" height="34" rx="17"/><text x="400" y="393.0" text-anchor="middle">Given names</text></g>
+<g class="facet"><rect x="284.2" y="412.0" width="231.6" height="34" rx="17"/><text x="400" y="434.0" text-anchor="middle">Place names by date</text></g>
+<g class="facet"><rect x="279.0" y="453.0" width="242.0" height="34" rx="17"/><text x="400" y="475.0" text-anchor="middle">Who held the records</text></g>
+<g class="facet"><rect x="299.8" y="494.0" width="200.4" height="34" rx="17"/><text x="400" y="516.0" text-anchor="middle">Flags and rulers</text></g>
+<g class="facet"><rect x="310.2" y="535.0" width="179.6" height="34" rx="17"/><text x="400" y="557.0" text-anchor="middle">Roots &amp; Routes</text></g>
+<g class="arch"><rect x="444.4" y="83.5" width="157.6" height="38" rx="6"/><text x="523.2" y="108.5" text-anchor="middle">Defranceski</text></g>
+<g class="arch"><rect x="636.1" y="257.8" width="122.8" height="38" rx="6"/><text x="697.5" y="282.8" text-anchor="middle">Blažević</text></g>
+<g class="arch"><rect x="653.5" y="504.2" width="88.0" height="38" rx="6"/><text x="697.5" y="529.2" text-anchor="middle">Falco</text></g>
+<g class="arch"><rect x="473.4" y="678.5" width="99.6" height="38" rx="6"/><text x="523.2" y="703.5" text-anchor="middle">Lerena</text></g>
+<g class="arch"><rect x="232.8" y="678.5" width="88.0" height="38" rx="6"/><text x="276.8" y="703.5" text-anchor="middle">Mazza</text></g>
+<g class="arch"><rect x="41.1" y="504.2" width="122.8" height="38" rx="6"/><text x="102.5" y="529.2" text-anchor="middle">Luwinski</text></g>
+<g class="arch"><rect x="52.7" y="257.8" width="99.6" height="38" rx="6"/><text x="102.5" y="282.8" text-anchor="middle">D’Arcy</text></g>
+<g class="arch"><rect x="221.2" y="83.5" width="111.2" height="38" rx="6"/><text x="276.8" y="108.5" text-anchor="middle">Booyzen</text></g>
+<g class="kit"><rect x="328" y="120" width="144" height="28" rx="14"/><text x="400" y="139" text-anchor="middle">one shared kit</text></g>
+        </svg>
+      </figure>
+      <div class="read">
+        <h2>Read it from the middle out</h2>
+        <p>At the centre is <a href="https://recordatlas.org/" rel="noopener">Record Atlas</a>: every place, the names it has had, who ruled it in a given year, and who holds the paper. Around it, each family archive reads from it, and sends back what it finds.</p>
+        <ul class="key" aria-label="How to read the picture">
+          <li><svg viewBox="0 0 38 12" aria-hidden="true"><line x1="0" y1="6" x2="38" y2="6" stroke="var(--accent)" stroke-width="2"/></svg><span>The archive reads the atlas: names, places, rulers, records.</span></li>
+          <li><svg viewBox="0 0 38 12" aria-hidden="true"><line x1="0" y1="6" x2="38" y2="6" stroke="var(--ink-3)" stroke-width="2" stroke-dasharray="5 5"/></svg><span>What it finds goes back, so the next search starts further on.</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <section aria-labelledby="mid-h">
+      <h2 id="mid-h">What sits in the middle</h2>
+      <p style="max-width:640px">Four things the archives would otherwise each have to guess at, kept once, with the evidence behind them.</p>
+      <div class="cols">
+        <div class="card"><h3>The names, in every spelling</h3><p>Ivan, Johann, Giovanni, Zuane and John are one given name. A surname is written five ways by five clerks. The atlas keeps the catalogue of which spellings are the same name, and what each rests on, so a search tries all of them.</p><span class="n">surnames · given names · across languages</span></div>
+        <div class="card"><h3>The place, under its name that year</h3><p>A register is indexed under the name its clerk used. Fiume is Rijeka; Salisbury is Harare. The atlas knows what a place was called, and when, so a search for today&rsquo;s name does not miss yesterday&rsquo;s book.</p><span class="n">names by date · so nothing is missed</span></div>
+        <div class="card"><h3>Whose paper it was</h3><p>A village changes ruler and its records move to another office. The atlas knows which empire&rsquo;s filing system a place fell under in a given year, so it can say where to write, and whether anyone has opened the book.</p><span class="n">rulers by year · who holds what</span></div>
+        <div class="card"><h3>What was happening, and under what flag</h3><p>Flags, borders and the events around a family, drawn from the same record of who ruled where. They sit beside a person&rsquo;s story as context, never as a claim that this person saw them.</p><span class="n">flags · history · the world around</span></div>
+      </div>
+      <ul class="figs" aria-label="The atlas in numbers">
+        <li><b>55,000+</b>places</li>
+        <li><b>3.4 million</b>record volumes</li>
+        <li><b>90</b>countries with archives</li>
+        <li><b>3</b>catalogues of names</li>
+        <li><b>8</b>family archives reading it</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="path-h">
+      <h2 id="path-h">How one question travels</h2>
+      <p class="said">&ldquo;A man called Zuane, baptised in Fiume in 1830.&rdquo;</p>
+      <ol class="steps">
+        <li><h3>The name widens</h3><p>The atlas knows Zuane is Giovanni, Ivan, Johann and Joannes, and which language each belongs to, so the search is not limited to the form on the family tree.</p></li>
+        <li><h3>The place finds its year</h3><p>Fiume is today&rsquo;s Rijeka, and in 1830 it sat under Habsburg rule. That says which archive&rsquo;s registers to look in, and under which name they are indexed.</p></li>
+        <li><h3>The shelf is checked</h3><p>The atlas lists the volumes that cover that place and those years, and whether anyone has read them. A book nobody opened looks different from a book somebody searched and found empty.</p></li>
+        <li><h3>The archive tells it, graded</h3><p>What is found goes into the family archive with a grade: documented, inferred, or family memory. It is never promoted by rewording. The result goes back to the atlas, so the next person does not search the same page twice.</p></li>
+      </ol>
+    </section>
+
+    <section aria-labelledby="why-h">
+      <h2 id="why-h">Why it is built this way</h2>
+      <div class="rules">
+        <div><h3>Keep what the document says</h3><p>A spelling is recorded as printed. Grouping names is for finding them, never a claim that two people are one.</p></div>
+        <div><h3>One copy of anything shared</h3><p>The pages, the evidence marks and the checks are the same in every archive, so one fix reaches all eight, and a mistake cannot hide in one.</p></div>
+        <div><h3>Checks that prove themselves</h3><p>Every build runs dozens of checks, and each check is tested by planting the fault it is meant to catch. A check that cannot fail does not count.</p></div>
+        <div><h3>The living are not published</h3><p>One rule, the same everywhere, decides who may be alive. Anyone who might be is a name and a relationship, nothing more.</p></div>
+      </div>
+    </section>
+
+    <section aria-labelledby="see-h">
+      <h2 id="see-h">See it working</h2>
+      <p style="max-width:640px">Search a name in every spelling, look up a village under any name it has had, or open one of the archives and follow a family.</p>
+      <div class="go">
+        <a href="https://recordatlas.org/your-name/" rel="noopener">Say your name →</a>
+        <a class="alt" href="https://recordatlas.org/" rel="noopener">Open the atlas →</a>
+        <a class="alt" href="/#families">The family archives →</a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div><a href="/">Back to defranceski.com</a> · <a href="/privacy/">Privacy</a></div>
+    <div>&copy; 2026 Defranceski</div>
+  </footer>
+</div>
+</body>
+</html>
