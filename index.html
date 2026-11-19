@@ -192,9 +192,14 @@ a { color: inherit; }
 
 .start { margin-top: 26px; padding-top: 18px; border-top: 1px solid var(--rule); }
 .start h2 { font: 700 13px/1.2 var(--font-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); }
-.start ul { list-style: none; margin: 12px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 10px; }
-.start a { display: block; height: 100%; padding: 12px 14px; background: var(--panel); border: 1px solid var(--rule); border-left: 3px solid var(--accent); border-radius: 4px; text-decoration: none; }
+.start ul { list-style: none; margin: 12px 0 0; padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; }
+.start a { display: block; height: 100%; padding: 14px; background: var(--panel); border: 1px solid var(--rule); border-top: 3px solid var(--accent); border-radius: 4px; text-decoration: none; }
+.st-ic { display: grid; place-items: center; width: 40px; height: 40px; margin-bottom: 10px; border-radius: 10px; background: var(--accent-soft); color: var(--accent); }
+.st-ic svg { width: 24px; height: 24px; }
+.start a:hover .st-ic, .start a:focus-visible .st-ic { background: var(--accent); color: var(--accent-ink); }
 .start a:hover { border-color: var(--accent); }
+@media (max-width: 1000px) { .start ul { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 640px) { .start ul { grid-template-columns: 1fr; } .start a { display: grid; grid-template-columns: 40px 1fr; column-gap: 12px; align-items: start; } .st-ic { grid-row: 1 / span 2; margin-bottom: 0; } }
 .start b { display: block; font: 700 16px/1.25 var(--font-display); letter-spacing: -.01em; }
 .start span { display: block; margin-top: 3px; font-size: 13.5px; line-height: 1.35; color: var(--ink-3); }
 
@@ -361,11 +366,11 @@ footer a { color: var(--ink-2); }
       <nav class="start" aria-labelledby="start-h">
         <h2 id="start-h">What are you here to do?</h2>
         <ul>
-          <li><a href="#families"><b>Research a family or surname</b><span>The eight family archives, each graded by its evidence</span></a></li>
-          <li><a href="https://recordatlas.org/your-name/" rel="noopener"><b>Search a name, every spelling</b><span>Surnames and given names, across languages and clerks</span></a></li>
-          <li><a href="#atlas"><b>Find records for a place</b><span>Record Atlas: who holds the paper, and where</span></a></li>
-          <li><a href="https://archive.defranceski.com/story/" rel="noopener"><b>Read the family story</b><span>A short book of each family's direct line, with trees and maps. Our Family tells it for a child</span></a></li>
-          <li><a href="#apps"><b>Try an app or a tool</b><span>Nine iPhone apps, plus online tools</span></a></li>
+          <li><a href="#families"><i class="st-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2.3"/><circle cx="6" cy="19" r="2.3"/><circle cx="18" cy="19" r="2.3"/><path d="M12 7.3v4.2M12 11.5H6v5.2M12 11.5h6v5.2"/></svg></i><b>Research a family or surname</b><span>The eight family archives, each graded by its evidence</span></a></li>
+          <li><a href="https://recordatlas.org/your-name/" rel="noopener"><i class="st-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6.2"/><path d="M14.6 14.6 20.5 20.5M7.6 12.6 10 7l2.4 5.6M8.4 10.9h3.2"/></svg></i><b>Search a name, every spelling</b><span>Surnames and given names, across languages and clerks</span></a></li>
+          <li><a href="#atlas"><i class="st-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6.5-5.7-6.5-11a6.5 6.5 0 0 1 13 0c0 5.3-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></svg></i><b>Find records for a place</b><span>Record Atlas: who holds the paper, and where</span></a></li>
+          <li><a href="https://archive.defranceski.com/story/" rel="noopener"><i class="st-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.6C10.3 5.3 7.5 4.8 4 5.1v12.8c3.5-.3 6.3.2 8 1.6 1.7-1.4 4.5-1.9 8-1.6V5.1c-3.5-.3-6.3.2-8 1.5zM12 6.6v12.9"/></svg></i><b>Read the family story</b><span>A short book of each family's direct line, with trees and maps</span></a></li>
+          <li><a href="#apps"><i class="st-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2.8" width="10" height="18.4" rx="2.4"/><path d="M10.5 18.2h3"/></svg></i><b>Try an app or a tool</b><span>Nine iPhone apps, plus online tools</span></a></li>
         </ul>
       </nav>
     </div>
@@ -385,7 +390,6 @@ footer a { color: var(--ink-2); }
           <li><a href="https://recordatlas.org/surnames/" rel="noopener"><b>Surnames</b><span>Have a name and nothing else? See every way it is spelt and the countries it is found in.</span></a></li>
           <li><a href="https://recordatlas.org/your-name/" rel="noopener"><b>Say your name</b><span>Ivan, Johann, Giovanni, Zuane and John are one given name. Find every form a clerk may have written, in a register or an index.</span></a></li>
           <li><a href="https://recordatlas.org/tree-canvas/" rel="noopener"><b>Tree Canvas</b><span>Drop in a family tree file and lay your people out like a pinboard, compare them with the eight archives, and follow them across the map in Compass. It never leaves your computer.</span></a></li>
-          <li><a href="https://recordatlas.org/roots/" rel="noopener"><b>Roots &amp; Routes</b><span>Drop in a family tree file and see it drawn on the map, each place with the flag that flew over it that year. It never leaves your computer.</span></a></li>
           <li><a href="https://recordatlas.org/flags/" rel="noopener"><b>Flags Atlas</b><span>Who ruled where, flag by flag, through the centuries.</span></a></li>
           <li><a href="https://recordatlas.org/history/" rel="noopener"><b>History</b><span>Watch the ground change hands, year by year.</span></a></li>
         </ul>
